@@ -1,0 +1,266 @@
+.app {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgb(241, 241, 241);
+    transition: all .2s;
+    padding-bottom: 10vh;
+}
+
+.div-1 {
+    text-align: center;
+    padding-top: 70px;
+}
+
+.div-2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.div-2 h3 {
+    max-width: 85%;
+    margin: 0 auto;
+    font-size: 21px;
+    font-weight: 500;
+    color: #444;
+    font-family: sans-serif;
+}
+
+.div-3 {
+    background: #fff;
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 4px;
+    padding: 3px 0px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.b-id {
+    font-size: 16px;
+    font-weight: 400;
+    color: #888;
+    margin: 0px;
+    transform: translateY(5px);
+}
+
+.input-id {
+    font-size: 16px;
+    font-weight: 400;
+    color: #444;
+    padding: 5px 10px;
+    border: none;
+    border-left: 1px solid #eee;
+    width: 100%;
+}
+
+.div-4 {
+    background: #fff;
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 4px;
+    padding: 3px 0px;
+}
+
+.b-name {
+    font-size: 16px;
+    font-weight: 400;
+    color: #888;
+    margin-right: 53px;
+}
+
+.input-name {
+    font-size: 16px;
+    font-weight: 400;
+    color: #444;
+    padding: 5px 10px;
+    border: none;
+    border-left: 1px solid #eee;
+}
+
+.input-id:focus {
+    outline: none;
+}
+
+.input-name:focus {
+    outline: none;
+}
+
+.div-5 {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.button-1 {
+    margin: 0 auto;
+    border: 0;
+    background-color: #23aaf8;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 85%;
+}
+
+.button-1:focus {
+    outline: none;
+}
+
+.result {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 40px;
+    font-size: 16px;
+    background: #fff;
+    border-radius: 4px;
+    padding: 13px 20px;
+}
+
+.result p {
+    border-bottom: 1px solid #eee;
+    padding: 5px 10px;
+}
+
+.result p:last-child{
+    border: none;
+}
+
+.div-6 {
+    text-align: center;
+}
+
+.div-6 p {
+    display: inline-block;
+    font-size: 18px;
+    letter-spacing: .5px;
+    border-radius: 4px;
+    background: rgba(97, 97, 97, 0.58);
+    color: #fff;
+    padding: 5px 15px;
+    margin-top: 40px;
+}
+
+.admin-div {
+    display: flex;
+    width: 50vh;
+}
+
+.admin-input {
+    width: 24.5vh;
+    border-right: .1vh solid #eee;
+    margin: 0px;
+    color: #777;
+}
+
+.admin-select {
+    border-left: 2px solid #eee;
+    border: none;
+    background: #fff;
+    width: 25vh;
+    font-size: 16px;
+    color: #777;
+    padding-left: 7px;
+}
+
+.admin-add-btn{
+    background: #888;
+    width: 20vh;
+    font-size: 14px;
+    height: 35px;
+    line-height: 15px;
+    border-radius: 5px;
+    transition: all .2s;
+}
+
+.admin-add-btn:hover{
+    background: #444;
+}
+
+.admin-add{
+    padding-top: 20px;
+    margin: 0 auto;
+    width: 50vh;
+}
+
+.admin-submit{
+    margin: 0 auto;
+    width: 50vh;
+}
+
+.admin-file{
+    width: 50vh;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+
+.admin-file p{
+    background: #fff;
+    font-size: 16px;
+    color: #777;
+    padding: 8px 0px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #eee;
+    transition: all .2s;
+}
+
+.admin-file p:hover{
+    background: #f7f8f9;
+}
+
+.admin-file p:last-child{
+    border: none;
+    border-radius: 0 0 4px 4px;
+}
+
+.admin-file p:nth-child(1){
+    border-radius: 4px 4px 0 0;
+}
+
+.admin-raw{
+    width: 50vh;
+    margin: 0 auto;
+    text-align: left;
+    background: #fff;
+    padding: 15px 15px 5px 15px;
+    color: #777;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.footer{
+    text-align: center;
+    color: #777;
+    font-size: 16px;
+    position: fixed;
+    bottom: 0px;
+    background: #fff;
+    padding: 15px 0px 3px 0px;
+    width: 100%;
+    box-shadow: 0px -3px 11px rgba(0, 0, 0, 0.06);
+}
+
+
+@media screen and (max-width:767px){
+    .admin-file{
+        width: 90%;
+    }
+    .admin-submit{
+        width: 90%;
+    }
+    .button-admin{
+        width: 100% !important;
+    }
+    .admin-raw{
+        width: 90%;
+    }
+    .admin-div{
+        width: 90%;
+    }
+}
+
+.query-title{
+    flex-basis: 30%;
+    text-align: center;
+}
