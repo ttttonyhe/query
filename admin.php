@@ -4,7 +4,7 @@ if (!!explode('/?', $_GET['auth'])[0]) {
 } else {
     $auth = $_GET['auth'];
 }
-if ($auth == '0Ma85691pFK0uvUS05Dbmn4J721hYRRZ') { ?>
+if ($auth == 'xxxxxxx') { ?>
 <!DOCTYPE html>
 <html>
 
