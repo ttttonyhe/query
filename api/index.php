@@ -38,8 +38,28 @@ if(!empty($string) && !empty($id)){
     
     if($status){
 
-    //数据库比对
-    $array = Lazer::table((string)$id)->where($key_array[0]['key'],'=',$key_array[0]['value'])->andWhere($key_array[1]['key'],'=',$key_array[1]['value'])->find()->asArray();
+switch(count($key_array)){
+	case 1:
+		$array = Lazer::table((string)$id)->where($key_array[0]['key'],'=',$key_array[0]['value'])->findAll()->asArray();
+		break;
+	case 2:
+		$array = Lazer::table((string)$id)->where($key_array[0]['key'],'=',$key_array[0]['value'])->andWhere($key_array[1]['key'],'=',$key_array[1]['value'])->findAll()->asArray();
+		break;
+	case 3:
+		$array = Lazer::table((string)$id)->where($key_array[0]['key'],'=',$key_array[0]['value'])->andWhere($key_array[1]['key'],'=',$key_array[1]['value'])->andWhere($key_array[2]['key'],'=',$key_array[2]['value'])->findAll()->asArray();
+		break;
+	case 4:
+		$array = Lazer::table((string)$id)->where($key_array[0]['key'],'=',$key_array[0]['value'])->andWhere($key_array[1]['key'],'=',$key_array[1]['value'])->andWhere($key_array[2]['key'],'=',$key_array[2]['value'])->andWhere($key_array[3]['key'],'=',$key_array[3]['value'])->findAll()->asArray();
+		break;
+	case 5:
+		$array = Lazer::table((string)$id)->where($key_array[0]['key'],'=',$key_array[0]['value'])->andWhere($key_array[1]['key'],'=',$key_array[1]['value'])->andWhere($key_array[2]['key'],'=',$key_array[2]['value'])->andWhere($key_array[3]['key'],'=',$key_array[3]['value'])->andWhere($key_array[4]['key'],'=',$key_array[4]['value'])->findAll()->asArray();
+		break;
+	case 6:
+		$array = Lazer::table((string)$id)->where($key_array[0]['key'],'=',$key_array[0]['value'])->andWhere($key_array[1]['key'],'=',$key_array[1]['value'])->andWhere($key_array[2]['key'],'=',$key_array[2]['value'])->andWhere($key_array[3]['key'],'=',$key_array[3]['value'])->andWhere($key_array[4]['key'],'=',$key_array[4]['value'])->andWhere($key_array[5]['key'],'=',$key_array[5]['value'])->findAll()->asArray();
+		break;
+	default:
+		break;
+}
         if(!$array){
             $array = array(
                 'status' => false,
@@ -47,12 +67,15 @@ if(!empty($string) && !empty($id)){
                 'msg' =>'未找到匹配'   
             );
         }else{
+        	for($i=0;$i<count($array);$i++){
+        		$new[$i] = array_values($array[$i]);
+        	}
             $array = array(
                 'status' => true,
                 //键名数组
                 'key_array' => array_values(array_flip($array[0])),
                 //数据数组
-                'source_array' => array_values($array[0])
+                'source_array' => $new
             );
         }
     }else{
